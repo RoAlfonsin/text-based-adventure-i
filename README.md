@@ -7,4 +7,4 @@ Text-based-adventure-i is a text-based adventure written in python (Thank you ca
 
 ## Things to develop
 - Create the Classes file setup_classes.py (Created)
-- Create the player and the first monster
+- Create the player and the first monster (Created)
