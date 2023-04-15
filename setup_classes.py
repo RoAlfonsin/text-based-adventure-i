@@ -14,6 +14,17 @@ class Warrior:
         self.health_stat = self.max_hp_stat
         self.equipped_gear = no_gear
         self.description = input_description
+    
+    def is_alive(self):
+        if self.health_stat <= 0:
+            return False
+        else:
+            return True
+    
+    def action_attack(self, enemy):
+        enemy.health_stat -= self.attack_stat - enemy.defense_stat 
+        
+        
 
 class Item:
     def __init__(self, input_type, input_value, input_description):

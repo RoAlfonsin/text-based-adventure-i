@@ -3,7 +3,10 @@
 #Importing the documents we need
 #setup_classes is used to define the Classes
 import setup_classes as sc
+import turn_settup as ts
 
-player = sc.Warrior(100, 10, 10, "Player 1")
+first_player = sc.Warrior(100, 10, 10, "Player 1")
 first_monster = sc.Warrior(10, 15, 8, "First monster created")
+
+ts.battle(first_player, first_monster)
 
