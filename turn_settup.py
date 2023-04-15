@@ -6,3 +6,6 @@ def battle(player: sc.Warrior, monster: sc.Warrior):
         if monster.is_alive():
             monster.action_attack(player)
         print(player.health_stat, monster.health_stat)
+
+def turn(player: sc.Warrior, monster: sc.Warrior):
+    battle(player, monster)
