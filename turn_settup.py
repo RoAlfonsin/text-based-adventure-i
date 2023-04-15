@@ -8,4 +8,6 @@ def battle(player: sc.Warrior, monster: sc.Warrior):
         print(player.health_stat, monster.health_stat)
 
 def turn(player: sc.Warrior, monster: sc.Warrior):
+    player.select_items()
     battle(player, monster)
+    player.remove_items()

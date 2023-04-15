@@ -36,6 +36,17 @@ class Warrior:
         if item_to_equip.item_type == "def_item":
             self.defense_stat += item_to_equip.item_value
     
+    def remove_items(self):
+        for item_to_remove in self.equipped_item_list:
+            if item_to_remove.item_type == "hp_item":
+                self.health_stat -= item_to_remove.item_value
+            if item_to_remove.item_type == "atk_item":
+                self.attack_stat -= item_to_remove.item_value
+            if item_to_remove.item_type == "def_item":
+                self.defense_stat -= item_to_remove.item_value
+        if self.defense_stat < 0:
+            self.defense_stat = 1
+    
     def bag_items_print(self):
         print("\nHealth Items")
         printing_atk_items = False
@@ -75,7 +86,6 @@ class Warrior:
                 user_command = str(input('\nTo equip an item input the id_number else input "Go" '))
                 continue
             
-            self.equipped_item_list.append(self.bag_items[int(user_command)])
             self.equip_item(self.bag_items.pop(int(user_command)))
             self.bag_items_print()
             user_command = str(input('\nTo equip an item input the id_number else input "Go" '))
