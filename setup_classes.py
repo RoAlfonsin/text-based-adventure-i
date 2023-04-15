@@ -37,7 +37,7 @@ class Warrior:
             self.defense_stat += item_to_equip.item_value
     
     def bag_items_print(self):
-        print("Health Items")
+        print("\nHealth Items")
         printing_atk_items = False
         printing_def_items = False
         for index in range(1, len(self.bag_items)):
@@ -47,12 +47,12 @@ class Warrior:
             if item_to_print.item_type == "atk_item":
                 if not printing_atk_items:
                     printing_atk_items = True
-                    print("Attack Items")
+                    print("\nAttack Items")
                 print(index, "-",item_to_print.description, item_to_print.item_value)
             if item_to_print.item_type == "def_item":
                 if not printing_def_items:
                     printing_def_items = True
-                    print("Defense Items")
+                    print("\nDefense Items")
                 print(index, "-",item_to_print.description, item_to_print.item_value)
                     
     
@@ -63,13 +63,28 @@ class Warrior:
             return True
     
     def select_items(self):
-        user_command = print('To equip an item input the id_number else input "Go"')
-        self.bag_items_print(self.bag_items)
+        self.bag_items_print()
+        user_command = str(input('\nTo equip an item input the id_number else input "Go" '))
         while user_command != 'Go':
-            break
+            if not user_command.isnumeric():
+                print('ERROR! The command should be a number or "Go"')
+                user_command = str(input('\nTo equip an item input the id_number else input "Go" '))
+                continue
+            if int(user_command) >= len(self.bag_items) or int(user_command) < 1:
+                print("ERROR! The id_number was not found")
+                user_command = str(input('\nTo equip an item input the id_number else input "Go" '))
+                continue
+            
+            self.equipped_item_list.append(self.bag_items[int(user_command)])
+            self.equip_item(self.bag_items.pop(int(user_command)))
+            self.bag_items_print()
+            user_command = str(input('\nTo equip an item input the id_number else input "Go" '))
+            
+                
     
     def action_attack(self, enemy):
-        enemy.health_stat -= self.attack_stat - enemy.defense_stat 
+        if self.attack_stat - enemy.defense_stat > 0:
+            enemy.health_stat -= self.attack_stat - enemy.defense_stat 
         
         
 

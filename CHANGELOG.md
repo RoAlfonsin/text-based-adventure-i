@@ -22,4 +22,7 @@
 9. Defined turn function (needs work).
 10. Changed bag_item_list to bag_items and forced Item class
 11. Defined bag_items_print function
-10. Defined select_items function (needs work)
+12. commit 806f7362a468f4190496c64ab6073a3ece8643b1
+
+13. Defined select_items for Warrior
+14. Fixed bug when defense high in action_attack in setup_classes.py
