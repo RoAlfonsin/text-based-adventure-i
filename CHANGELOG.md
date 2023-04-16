@@ -45,3 +45,9 @@
 8. Changed inmunity to -1
 9. Merged gear-functions with main
 10. Deleted gear-functions
+11. commit main 8275b54
+
+12.Created first-campaign branch
+13. Modified order of __init__ for Gear
+14. Created easy_campaign_gear
+15. commit first-campaign
