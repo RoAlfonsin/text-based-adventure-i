@@ -47,7 +47,12 @@
 10. Deleted gear-functions
 11. commit main 8275b54
 
-12.Created first-campaign branch
+12. Created first-campaign branch
 13. Modified order of __init__ for Gear
 14. Created easy_campaign_gear
-15. commit first-campaign
+15. commit first-campaign 570fa74
+
+16. Added csv import in main
+17. Changed Gear data input
+18. Created gear to unlock
+19. commit first-campaign

@@ -1,5 +1,5 @@
 class Gear:
-    def __init__(self, input_attack, input_defense, input_description):
+    def __init__(self, input_description, input_attack, input_defense):
         self.description = input_description
         self.attack_modifier = input_attack
         self.defense_modifier = input_defense
