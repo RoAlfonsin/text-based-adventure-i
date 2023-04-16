@@ -28,5 +28,12 @@
 14. Fixed bug when defense high in action_attack in setup_classes.py
 15. commit f6302d8
 
-16. Defined remove_items
+16. Defined remove_items for Warrior
 17. Added select_items and remove_items to turn in turn_settup.py
+18. commit 39f9dce
+
+##04/16/2023
+
+1. Created new branch gear-functions
+2. Created gear_bag and defined add_to_gear_bag for Warrior
+3. Defined print_gear_bar for Warrior

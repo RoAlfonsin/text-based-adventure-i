@@ -24,7 +24,22 @@ class Warrior:
         self.equipped_gear = no_gear
         self.description = input_description
         self.bag_items = [Item]
+        self.gear_bag = [Gear]
         self.equipped_item_list = []
+    
+    def add_to_gear_bag(self, gear_item: Gear):
+        self.gear_bag.append(gear_item)
+    
+    def print_gear_bag(self):
+        aux_gear = self.equipped_gear
+        print("Equiped Gear: '{DESCRIPTION}', {ATKM} atk, {DEFM} def".format(aux_gear.description, aux_gear.attack_modifier, aux_gear.defense_modifier))
+        print("\nGear Bag\n")
+        for index in range(1, len(self.gear_bag)):
+            print("'{DESCRIPTION}', {ATKM} atk, {DEFM} def".format(self.gear_bag[index].description, self.gear_bag[index].attack_modifier, self.gear_bag[index].defense_modifier))
+    
+    def select_gear(self):
+        pass
+        
     
     def equip_item(self, item_to_equip: Item):
         self.equipped_item_list.append(item_to_equip)
