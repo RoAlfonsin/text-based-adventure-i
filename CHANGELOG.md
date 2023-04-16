@@ -55,4 +55,8 @@
 16. Added csv import in main
 17. Changed Gear data input
 18. Created gear to unlock
-19. commit first-campaign
+19. commit first-campaign 36d4ec9
+
+20. Deffined repr for Gear 
+21. Fixed print_gear_bag
+22. commit first-campaign 

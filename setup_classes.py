@@ -3,9 +3,20 @@ class Gear:
         self.description = input_description
         self.attack_modifier = input_attack
         self.defense_modifier = input_defense
+    
+    def __repr__(self):
+        desc =  self.description
+        atc = " - Atk: " + str(self.attack_modifier)
+        df = " Def: " + str(self.defense_modifier)
+        while len(desc) < 22:
+            desc += " "
+        while len(atc) < 11:
+            atc += " "
+        gear_print = desc + atc + df
+        return gear_print
 
 
-no_gear = Gear(0, 0, "No gear")        
+no_gear = Gear("No gear", 0, 0)        
 
 #Item class that is used for every expendable item
 #item_type is a string from [hp_item, atk_item, def_item]
@@ -32,11 +43,11 @@ class Warrior:
         self.gear_bag.append(gear_item)
     
     def print_gear_bag(self):
-        aux_gear = self.equipped_gear
-        print("Equiped Gear: {DESCRIPTION}, {ATKM} atk, {DEFM} def".format(DESCRIPTION = aux_gear.description, ATKM = aux_gear.attack_modifier, DEFM = aux_gear.defense_modifier))
+        #aux_gear = self.equipped_gear
+        print("\nEquiped Gear:\n", self.equipped_gear)
         print("\nGear Bag")
         for index in range(1, len(self.gear_bag)):
-            print(index, "- {DESCRIPTION}, {ATKM} atk, {DEFM} def".format(DESCRIPTION = self.gear_bag[index].description, ATKM = self.gear_bag[index].attack_modifier, DEFM = self.gear_bag[index].defense_modifier))
+            print(index, self.gear_bag[index])
     
     def equip_gear(self, gear_item: Gear):
         aux = self.equipped_gear
