@@ -43,3 +43,5 @@
 6. Defined select_gear for Warrior
 7. Added select_gear to turn in turn_settup.py
 8. Changed inmunity to -1
+9. Merged gear-functions with main
+10. Deleted gear-functions
