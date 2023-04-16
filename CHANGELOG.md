@@ -59,4 +59,4 @@
 
 20. Deffined repr for Gear 
 21. Fixed print_gear_bag
-22. commit first-campaign 
+22. commit first-campaign 43b8822
