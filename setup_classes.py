@@ -2,7 +2,7 @@ class Gear:
     def __init__(self, input_attack, input_defense, input_description):
         self.attack_modifier = input_attack
         self.defense_modifier = input_defense
-        self.description = input_description + "equipped."
+        self.description = input_description
 
 no_gear = Gear(0, 0, "No gear")        
 
@@ -32,13 +32,37 @@ class Warrior:
     
     def print_gear_bag(self):
         aux_gear = self.equipped_gear
-        print("Equiped Gear: '{DESCRIPTION}', {ATKM} atk, {DEFM} def".format(aux_gear.description, aux_gear.attack_modifier, aux_gear.defense_modifier))
-        print("\nGear Bag\n")
+        print("Equiped Gear: {DESCRIPTION}, {ATKM} atk, {DEFM} def".format(DESCRIPTION = aux_gear.description, ATKM = aux_gear.attack_modifier, DEFM = aux_gear.defense_modifier))
+        print("\nGear Bag")
         for index in range(1, len(self.gear_bag)):
-            print("'{DESCRIPTION}', {ATKM} atk, {DEFM} def".format(self.gear_bag[index].description, self.gear_bag[index].attack_modifier, self.gear_bag[index].defense_modifier))
+            print(index, "- {DESCRIPTION}, {ATKM} atk, {DEFM} def".format(DESCRIPTION = self.gear_bag[index].description, ATKM = self.gear_bag[index].attack_modifier, DEFM = self.gear_bag[index].defense_modifier))
+    
+    def equip_gear(self, gear_item: Gear):
+        aux = self.equipped_gear
+        self.attack_stat -= aux.attack_modifier
+        self.defense_stat -= aux.defense_modifier
+        self.gear_bag.append(aux)
+        self.equipped_gear = gear_item
+        self.attack_stat += gear_item.attack_modifier
+        self.defense_stat += gear_item.defense_modifier
     
     def select_gear(self):
-        pass
+        self.print_gear_bag()
+        user_command = str(input('\nTo equip Gear input the id_number else input "Go" '))
+        while user_command != 'Go':
+            if not user_command.isnumeric():
+                print('ERROR! The command should be a number or "Go"')
+                user_command = str(input('\nTo equip Gear input the id_number else input "Go" '))
+                continue
+            if int(user_command) >= len(self.gear_bag) or int(user_command) < 1:
+                print("ERROR! The id_number was not found")
+                user_command = str(input('\nTo equip Gear input the id_number else input "Go" '))
+                continue
+            
+            aux_gear = self.gear_bag.pop(int(user_command))
+            self.equip_gear(aux_gear)
+            self.print_gear_bag()
+            user_command = str(input('\nTo equip Gear input the id_number else input "Go" '))
         
     
     def equip_item(self, item_to_equip: Item):
@@ -109,7 +133,9 @@ class Warrior:
     
     def action_attack(self, enemy):
         if self.attack_stat - enemy.defense_stat > 0:
-            enemy.health_stat -= self.attack_stat - enemy.defense_stat 
+            enemy.health_stat -= self.attack_stat - enemy.defense_stat
+        else:
+            enemy.health_stat -= 1
         
         
 

@@ -37,3 +37,9 @@
 1. Created new branch gear-functions
 2. Created gear_bag and defined add_to_gear_bag for Warrior
 3. Defined print_gear_bar for Warrior
+4. commit gear-functions b4aeef5
+
+5. Defined equip_gear for Warrior
+6. Defined select_gear for Warrior
+7. Added select_gear to turn in turn_settup.py
+8. Changed inmunity to -1
