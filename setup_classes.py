@@ -28,7 +28,7 @@ class Item:
 
 class Warrior:
     
-    def __init__(self, input_hp, input_attack, input_defense, input_description):
+    def __init__(self, input_description, input_hp, input_attack, input_defense):
         self.max_hp_stat = input_hp
         self.attack_stat = input_attack
         self.defense_stat = input_defense
@@ -43,7 +43,6 @@ class Warrior:
         self.gear_bag.append(gear_item)
     
     def print_gear_bag(self):
-        #aux_gear = self.equipped_gear
         print("\nEquiped Gear:\n", self.equipped_gear)
         print("\nGear Bag")
         for index in range(1, len(self.gear_bag)):

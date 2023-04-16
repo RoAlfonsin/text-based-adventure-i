@@ -60,3 +60,8 @@
 20. Deffined repr for Gear 
 21. Fixed print_gear_bag
 22. commit first-campaign 43b8822
+
+23. Branch created 1-create-easy_campaign_monsters
+24. Changed order of input in init for Warrior
+25. Created monsters csv
+26. Added monsters to monsters_to_battle

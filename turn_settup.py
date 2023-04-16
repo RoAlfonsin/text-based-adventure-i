@@ -11,4 +11,7 @@ def turn(player: sc.Warrior, monster: sc.Warrior):
     player.select_gear()
     player.select_items()
     battle(player, monster)
-    player.remove_items()
+    if player.is_alive():
+        player.remove_items()
+    else:
+        print("GAME OVER")
