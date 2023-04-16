@@ -65,3 +65,4 @@
 24. Changed order of input in init for Warrior
 25. Created monsters csv
 26. Added monsters to monsters_to_battle
+27. commit and merge branches
