@@ -71,4 +71,5 @@
 29. Defined monster_print for Warrior
 30. Commit
 31. Created testing branch for monster_print
-32. Commit
+32. Commit C2e0ff5
+33. Merge
