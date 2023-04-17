@@ -150,9 +150,9 @@ class Warrior:
             
     def monster_print(self):
         print("Name:", self.description)
-        print("HP:", self.max_hp_stat)
-        print("ATK:", self.attack_stat)
-        print("DEF:",  self.defense_stat)
+        print("HP:  ", self.max_hp_stat)
+        print("ATK: ", self.attack_stat)
+        print("DEF: ",  self.defense_stat)
         
         
 

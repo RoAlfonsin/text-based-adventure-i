@@ -38,6 +38,7 @@ first_player.add_to_gear_bag(gear_item_2)
 
 monsters_index = 1
 while first_player.is_alive():
+    monsters_to_battle[monsters_index].monster_print()
     ts.turn(first_player, monsters_to_battle[monsters_index])
     monsters_index += 1
 
