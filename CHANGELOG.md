@@ -88,7 +88,7 @@
 9. Added items to bag
 10. merge, commit and delete branch 5317511
 
-6. Created branch for issue #3: add-time-to-battles
-7. Added time to battle in turn_settup.py
-8. Tested time in battle
-9. merge, commit and delete branch
+11. Created branch for issue #3: add-time-to-battles
+12. Added time to battle in turn_settup.py
+13. Tested time in battle
+14. merge, commit and delete branch
