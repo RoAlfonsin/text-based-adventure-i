@@ -153,6 +153,14 @@ class Warrior:
         print("HP:  ", self.max_hp_stat)
         print("ATK: ", self.attack_stat)
         print("DEF: ",  self.defense_stat)
+    
+    def player_print(self):
+        print("Name:  ", self.description)
+        print("MAX_HP:", self.max_hp_stat)
+        print("HP:    ", self.health_stat)
+        print("ATK:   ", self.attack_stat)
+        print("DEF:   ",  self.defense_stat)
+        
         
         
 

@@ -73,3 +73,8 @@
 31. Created testing branch for monster_print
 32. Commit C2e0ff5
 33. Merge
+
+## 04/17/23
+
+1. Created branch for issue 7 define player_print
+2. Defined player_print
