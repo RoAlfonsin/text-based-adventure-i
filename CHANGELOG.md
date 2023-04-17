@@ -97,4 +97,11 @@
 16. Defined buff_stats
 17. Added buff_stats to turn
 18. Changed first_player stats
-19. merge, commit and delete branch
+19. merge, commit and delete branch d594e03
+
+20. Created branch to solve issue #4: Create high score file
+21. Created high score file
+22. Imported time and created startingtime
+23. Added Congratulation message for winning the game
+24. Created funcionts necesary to keep and print scores
+25. merge, commit and delete branch

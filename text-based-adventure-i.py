@@ -5,7 +5,9 @@
 import setup_classes as sc
 import turn_settup as ts
 import csv
+import time 
 
+startingtime = time.localtime()
 first_player = sc.Warrior("Player 1", 100, 20, 15)
 
 #Create the gear to unlock
@@ -47,5 +49,27 @@ while first_player.is_alive():
     monsters_to_battle[monsters_index].monster_print()
     ts.turn(first_player, monsters_to_battle[monsters_index])
     monsters_index += 1
+    if monsters_index > 15:
+        print("\nCongratulations You Won The Game!!!\n")
+        break
 
+if first_player.is_alive():
+    endtime = time.localtime()
+    score = int(endtime.tm_sec) - int(startingtime.tm_sec)
+    new_scores = {score: first_player.description}
 
+    with open("High-Scores.csv", newline="") as highscores_file:
+        highscore_reader = csv.reader(highscores_file)
+        for row in highscore_reader:
+            new_scores[int(row[1])] = row[0]
+
+    scores_sorted = sorted(new_scores)
+    print("List of Scores")
+    for key_scores in scores_sorted:
+        print(new_scores[key_scores], "-", key_scores)
+
+    with open("High-Scores.csv", "w") as scores_file:
+        scores_writer = csv.writer(scores_file)
+        for key_score in scores_sorted:
+            string_to_write = [str(new_scores[key_score]),str(key_score)]
+            scores_writer.writerow(string_to_write)
