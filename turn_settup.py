@@ -17,5 +17,6 @@ def turn(player: sc.Warrior, monster: sc.Warrior):
     battle(player, monster)
     if player.is_alive():
         player.remove_items()
+        player.buff_stats()
     else:
         print("GAME OVER")

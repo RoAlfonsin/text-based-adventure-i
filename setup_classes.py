@@ -161,6 +161,16 @@ class Warrior:
         print("ATK:   ", self.attack_stat)
         print("DEF:   ",  self.defense_stat)
         
+    def buff_stats(self):
+        print("Congratulations on winning the Battle")
+        user_input = input("Select a stat to level up (atk/def): ")
+        while user_input != "atk" and user_input != "def":
+            print("Error! Not a valid option")
+            user_input = input("Select a stat to level up (atk/def): ")
+        if user_input == "atk":
+            self.attack_stat += 10
+        else:
+            self.defense_stat += 10
         
         
 

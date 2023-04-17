@@ -6,7 +6,7 @@ import setup_classes as sc
 import turn_settup as ts
 import csv
 
-first_player = sc.Warrior("Player 1", 100, 10, 10)
+first_player = sc.Warrior("Player 1", 100, 20, 15)
 
 #Create the gear to unlock
 gear_to_unlock = [sc.Gear]

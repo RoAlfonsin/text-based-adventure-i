@@ -92,3 +92,9 @@
 12. Added time to battle in turn_settup.py
 13. Tested time in battle
 14. merge, commit and delete branch
+
+15. Created branch to solve issue #9: buff character after battle
+16. Defined buff_stats
+17. Added buff_stats to turn
+18. Changed first_player stats
+19. merge, commit and delete branch
