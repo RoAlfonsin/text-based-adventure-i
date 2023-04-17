@@ -21,7 +21,7 @@ no_gear = Gear("No gear", 0, 0)
 #Item class that is used for every expendable item
 #item_type is a string from [hp_item, atk_item, def_item]
 class Item:    
-    def __init__(self, input_type: str, input_value: int, input_description: str):
+    def __init__(self, input_description: str, input_type: str, input_value: int):
         self.item_type = input_type
         self.item_value = input_value
         self.description = input_description

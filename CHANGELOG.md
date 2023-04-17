@@ -78,3 +78,12 @@
 
 1. Created branch for issue 7 define player_print
 2. Defined player_print
+3. merge and commit
+4. Deleted branch
+
+5. Created branch for issue #2: easy_campaign_items
+6. Created easy_campaign_items.csv file
+7. Changed order of entry in init for Item
+8. Recorded info for items for easy_campaign
+9. Added items to bag
+10. merge, commit and delete branch
