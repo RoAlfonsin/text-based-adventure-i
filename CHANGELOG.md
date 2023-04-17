@@ -66,3 +66,8 @@
 25. Created monsters csv
 26. Added monsters to monsters_to_battle
 27. commit and merge branches
+
+28. Branched to solve monster_print
+29. Defined monster_print for Warrior
+30. Commit
+31. Created testing branch for monster_print

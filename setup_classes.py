@@ -147,6 +147,12 @@ class Warrior:
             enemy.health_stat -= self.attack_stat - enemy.defense_stat
         else:
             enemy.health_stat -= 1
+            
+    def monster_print(self):
+        print("Name:", self.description)
+        print("HP:", self.max_hp_stat)
+        print("ATK:", self.attack_stat)
+        print("DEF:",  self.defense_stat)
         
         
 
