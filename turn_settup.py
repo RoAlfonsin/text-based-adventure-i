@@ -6,7 +6,9 @@ def battle(player: sc.Warrior, monster: sc.Warrior):
         player.action_attack(monster)
         if monster.is_alive():
             monster.action_attack(player)
-        print(player.description, "HP:", player.health_stat, "-",  monster.description, "HP:", monster.health_stat)
+        player_hp_to_print = max(player.health_stat, 0)
+        monster_hp_to_print = max(monster.health_stat, 0)
+        print(player.description, "HP:", player_hp_to_print, "-",  monster.description, "HP:", monster_hp_to_print)
         print("...")
         time.sleep(1.5)
         

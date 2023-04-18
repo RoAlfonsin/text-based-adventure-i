@@ -120,3 +120,7 @@
 33. Created branch for issue #15 problems printing bag of items
 34. Fixed bug printing "Health Items" when empty
 35. commit, merge and erased branch
+
+36. Created branch for issue #12 negative numbers on death
+37. Fixed bug adding lines to battle method
+38. commit, merge and erase branch
