@@ -9,7 +9,8 @@ import datetime
 
 #Objects needed for program to work
 startingtime = datetime.datetime.now()
-first_player = sc.Warrior("Player 1", 150, 25, 25)
+username_input = input("What is your name, warrior?")
+first_player = sc.Warrior(username_input, 150, 25, 25)
 gear_to_unlock = [sc.Gear]
 monsters_to_battle = [sc.Warrior]
 
