@@ -115,3 +115,4 @@
 29. Created branch for issue #13 unlock_gear
 30. Added two new gear
 31. Created function to add gear
+32. commit, merge and erased
