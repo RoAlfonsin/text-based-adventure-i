@@ -94,8 +94,8 @@ class Warrior:
                 self.attack_stat -= item_to_remove.item_value
             if item_to_remove.item_type == "def_item":
                 self.defense_stat -= item_to_remove.item_value
-        if self.defense_stat < 0:
-            self.defense_stat = 1
+        if self.health_stat < 0:
+            self.health_stat = 1
     
     def bag_items_print(self):
         print("\nHealth Items")
