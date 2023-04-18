@@ -100,12 +100,16 @@ class Warrior:
             
     
     def bag_items_print(self):
-        print("\nHealth Items")
+        print("\nItems In Bag")
+        printing_hp_items = False
         printing_atk_items = False
         printing_def_items = False
         for index in range(1, len(self.bag_items)):
             item_to_print = self.bag_items[index]
             if item_to_print.item_type == "hp_item":
+                if not printing_hp_items:
+                    printing_hp_items = True
+                    print("\nHealth Items")                   
                 print(index, "-", item_to_print.description, item_to_print.item_value)
             if item_to_print.item_type == "atk_item":
                 if not printing_atk_items:

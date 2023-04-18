@@ -116,3 +116,7 @@
 30. Added two new gear
 31. Created function to add gear
 32. commit, merge and erased
+
+33. Created branch for issue #15 problems printing bag of items
+34. Fixed bug printing "Health Items" when empty
+35. commit, merge and erased branch
