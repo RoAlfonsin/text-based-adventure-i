@@ -148,3 +148,9 @@
 11. Created and int for score
 12. Recorded first high score
 13. commit, merge and delete branch
+
+14. Created branch to fix issue #20 documentationa and refactoring
+15. Documented turn_settup.py
+16. Defined create_stuff
+17. Documented text-based-adventure-i.py
+18. Documented setup_classes

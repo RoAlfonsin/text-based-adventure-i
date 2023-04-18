@@ -1,3 +1,4 @@
+#This class is for the items the player can equip as gear
 class Gear:
     def __init__(self, input_description, input_attack, input_defense):
         self.description = input_description
@@ -14,8 +15,6 @@ class Gear:
             atc += " "
         gear_print = desc + atc + df
         return gear_print
-
-
 no_gear = Gear("No gear", 0, 0)        
 
 #Item class that is used for every expendable item
@@ -26,6 +25,7 @@ class Item:
         self.item_value = input_value
         self.description = input_description
 
+#The main class of the game, it is used for the player and the monsters
 class Warrior:
     
     def __init__(self, input_description, input_hp, input_attack, input_defense):
@@ -75,7 +75,6 @@ class Warrior:
             self.player_print()
             self.print_gear_bag()
             user_command = str(input('\nTo equip Gear input the id_number else input "Go" '))
-        
     
     def equip_item(self, item_to_equip: Item):
         self.equipped_item_list.append(item_to_equip)
@@ -99,7 +98,6 @@ class Warrior:
             self.health_stat = 1
         self.equipped_item_list.clear()
             
-    
     def bag_items_print(self):
         print("\nItems In Bag")
         printing_hp_items = False
@@ -123,7 +121,6 @@ class Warrior:
                     print("\nDefense Items")
                 print(index, "-",item_to_print.description, item_to_print.item_value)
                     
-    
     def is_alive(self):
         if self.health_stat <= 0:
             return False
@@ -148,8 +145,6 @@ class Warrior:
             self.bag_items_print()
             user_command = str(input('\nTo equip an item input the id_number else input "Go" '))
             
-                
-    
     def action_attack(self, enemy):
         if self.attack_stat - enemy.defense_stat > 0:
             enemy.health_stat -= self.attack_stat - enemy.defense_stat

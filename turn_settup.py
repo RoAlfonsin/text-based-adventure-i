@@ -1,6 +1,7 @@
 import setup_classes as sc
 import time
 
+#This function controls the flow of one battle
 def battle(player: sc.Warrior, monster: sc.Warrior):
     while player.is_alive() and monster.is_alive():
         player.action_attack(monster)
@@ -12,7 +13,7 @@ def battle(player: sc.Warrior, monster: sc.Warrior):
         print("...")
         time.sleep(1.5)
         
-
+#This function controls the flow of one turn
 def turn(player: sc.Warrior, monster: sc.Warrior):
     player.select_gear()
     player.select_items()

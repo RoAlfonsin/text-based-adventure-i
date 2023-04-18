@@ -7,41 +7,47 @@ import turn_settup as ts
 import csv
 import datetime
 
+#Objects needed for program to work
 startingtime = datetime.datetime.now()
 first_player = sc.Warrior("Player 1", 150, 25, 25)
-
-#Create the gear to unlock
 gear_to_unlock = [sc.Gear]
-with open("easy_campaign_gear.csv", newline="") as easy_gear:
-    read_easy_gear = csv.reader(easy_gear)
-    next(read_easy_gear)
-    for row in read_easy_gear:
-        aux_gear = sc.Gear(str(row[0]), int(row[1]), int(row[2]))
-        gear_to_unlock.append(aux_gear)
-
-#Create monsters to battle
 monsters_to_battle = [sc.Warrior]
-with open("easy_campaign_monsters.csv", newline="") as easy_monsters:
-    read_easy_monsters = csv.reader(easy_monsters)
-    next(read_easy_monsters)
-    for row in read_easy_monsters:
-        aux_monster = sc.Warrior(str(row[0]), int(row[1]), int(row[2]), int(row[3]))
-        monsters_to_battle.append(aux_monster)
 
-#A items to bag
-with open("easy_campaign_items.csv", newline="") as easy_items:
-    read_easy_items = csv.reader(easy_items)
-    next(read_easy_items)
-    for row in read_easy_items:
-        new_item = sc.Item(str(row[0]), str(row[1]), int(row[2]))
-        first_player.bag_items.append(new_item)
+#Creates everything needed for the campaign
+def create_stuff():
+    #Create the gear to unlock
+    with open("easy_campaign_gear.csv", newline="") as easy_gear:
+        read_easy_gear = csv.reader(easy_gear)
+        next(read_easy_gear)
+        for row in read_easy_gear:
+            aux_gear = sc.Gear(str(row[0]), int(row[1]), int(row[2]))
+            gear_to_unlock.append(aux_gear)
+
+    #Create monsters to battle
+    with open("easy_campaign_monsters.csv", newline="") as easy_monsters:
+        read_easy_monsters = csv.reader(easy_monsters)
+        next(read_easy_monsters)
+        for row in read_easy_monsters:
+            aux_monster = sc.Warrior(str(row[0]), int(row[1]), int(row[2]), int(row[3]))
+            monsters_to_battle.append(aux_monster)
+
+    #Creates the items in bag
+    with open("easy_campaign_items.csv", newline="") as easy_items:
+        read_easy_items = csv.reader(easy_items)
+        next(read_easy_items)
+        for row in read_easy_items:
+            new_item = sc.Item(str(row[0]), str(row[1]), int(row[2]))
+            first_player.bag_items.append(new_item)
 
 
-gear_item_1 = sc.Gear("Spear of death", 5, -5,)
-gear_item_2 = sc.Gear("Shield of power", -5, 5)
-first_player.add_to_gear_bag(gear_item_1)
-first_player.add_to_gear_bag(gear_item_2)
+    gear_item_1 = sc.Gear("Spear of death", 5, -5,)
+    gear_item_2 = sc.Gear("Shield of power", -5, 5)
+    first_player.add_to_gear_bag(gear_item_1)
+    first_player.add_to_gear_bag(gear_item_2)
+create_stuff()
 
+#Main part of the program
+#While player is alive goes to every monster
 monsters_index = 1
 while first_player.is_alive():
     first_player.player_print()
@@ -54,6 +60,7 @@ while first_player.is_alive():
         print("\nCongratulations You Won The Game!!!\n")
         break
 
+#If player is succesfull keeps the score
 if first_player.is_alive():
     endtime = datetime.datetime.now()
     score = int((endtime - startingtime).total_seconds())
