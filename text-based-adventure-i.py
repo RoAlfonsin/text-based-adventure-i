@@ -5,9 +5,9 @@
 import setup_classes as sc
 import turn_settup as ts
 import csv
-import time 
+import datetime
 
-startingtime = time.localtime()
+startingtime = datetime.datetime.now()
 first_player = sc.Warrior("Player 1", 150, 25, 25)
 
 #Create the gear to unlock
@@ -55,8 +55,8 @@ while first_player.is_alive():
         break
 
 if first_player.is_alive():
-    endtime = time.localtime()
-    score = int(endtime.tm_sec) - int(startingtime.tm_sec)
+    endtime = datetime.datetime.now()
+    score = int((endtime - startingtime).total_seconds())
     new_scores = {score: first_player.description}
 
     with open("High-Scores.csv", newline="") as highscores_file:

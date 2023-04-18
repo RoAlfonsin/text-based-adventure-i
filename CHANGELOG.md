@@ -141,3 +141,10 @@
 
 06. Fixed bug with player hp over 250
 07. commit
+
+08. Created branch to fix issue #19
+09. Changed import of time for datetime
+10. Added datetime.now() for start and end
+11. Created and int for score
+12. Recorded first high score
+13. commit, merge and delete branch
