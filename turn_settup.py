@@ -20,6 +20,7 @@ def turn(player: sc.Warrior, monster: sc.Warrior):
     if player.is_alive():
         player.health_stat += 50
         player.remove_items()
+        player.health_stat = max(player.health_stat, 250)
         player.buff_stats()
     else:
         print("GAME OVER")

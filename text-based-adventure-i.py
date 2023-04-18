@@ -8,7 +8,7 @@ import csv
 import time 
 
 startingtime = time.localtime()
-first_player = sc.Warrior("Player 1", 150, 30, 30)
+first_player = sc.Warrior("Player 1", 150, 25, 25)
 
 #Create the gear to unlock
 gear_to_unlock = [sc.Gear]
