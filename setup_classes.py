@@ -72,6 +72,7 @@ class Warrior:
             
             aux_gear = self.gear_bag.pop(int(user_command))
             self.equip_gear(aux_gear)
+            self.player_print()
             self.print_gear_bag()
             user_command = str(input('\nTo equip Gear input the id_number else input "Go" '))
         
@@ -143,6 +144,7 @@ class Warrior:
                 continue
             
             self.equip_item(self.bag_items.pop(int(user_command)))
+            self.player_print()
             self.bag_items_print()
             user_command = str(input('\nTo equip an item input the id_number else input "Go" '))
             

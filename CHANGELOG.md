@@ -129,3 +129,10 @@
 40. Buffed items by manual
 41. Lowered monsters 5 to 10 by 0.8
 42. commit
+
+##04/18/23
+
+01. Created branch to fix issue #18
+02. Added prints for player stats after selecting gear and items
+03. Fixed issue #18
+04. Commit, merge and erase branch
