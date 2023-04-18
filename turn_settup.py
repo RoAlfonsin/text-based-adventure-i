@@ -18,7 +18,7 @@ def turn(player: sc.Warrior, monster: sc.Warrior):
     player.select_items()
     battle(player, monster)
     if player.is_alive():
-        player.health_stat += 50
+        player.health_stat += 30
         player.remove_items()
         player.health_stat = min(player.health_stat, 250)
         player.buff_stats()

@@ -175,9 +175,9 @@ class Warrior:
             print("Error! Not a valid option")
             user_input = input("Select a stat to level up (atk/def): ")
         if user_input == "atk":
-            self.attack_stat += 10
+            self.attack_stat += 7
         else:
-            self.defense_stat += 10
+            self.defense_stat += 7
         
         
 
