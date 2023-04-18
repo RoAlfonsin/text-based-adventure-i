@@ -124,3 +124,8 @@
 36. Created branch for issue #12 negative numbers on death
 37. Fixed bug adding lines to battle method
 38. commit, merge and erase branch
+
+39. Buffed gear by 1.5 for positives
+40. Buffed items by manual
+41. Lowered monsters 5 to 10 by 0.8
+42. commit
