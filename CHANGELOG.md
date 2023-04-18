@@ -108,3 +108,6 @@
 
 26. Fixed issues #10 and #11
 27. Commit 
+
+27. Fixed issue #14 by clearing equipped_item_list in remove_items
+28. Commit & merge
