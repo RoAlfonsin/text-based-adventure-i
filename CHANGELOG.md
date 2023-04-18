@@ -111,3 +111,7 @@
 
 27. Fixed issue #14 by clearing equipped_item_list in remove_items
 28. Commit & merge
+
+29. Created branch for issue #13 unlock_gear
+30. Added two new gear
+31. Created function to add gear

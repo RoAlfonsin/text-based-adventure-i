@@ -48,6 +48,7 @@ while first_player.is_alive():
     print("\nvs\n")
     monsters_to_battle[monsters_index].monster_print()
     ts.turn(first_player, monsters_to_battle[monsters_index])
+    first_player.add_to_gear_bag(gear_to_unlock[monsters_index])
     monsters_index += 1
     if monsters_index > 15:
         print("\nCongratulations You Won The Game!!!\n")

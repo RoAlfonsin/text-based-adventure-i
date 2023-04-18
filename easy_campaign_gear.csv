@@ -1,6 +1,6 @@
 Description,Atk Modifier,Def Modifier
-The Gun of Agony,5,-5
-The Arrows of Despair,-5,5
+The Gun of Agony,7,-7
+The Arrows of Despair,3,3
 The Helmet of Justice,12,-10
 The Bow of Courage,-10,14
 The Axe of Hope,0,6
@@ -12,3 +12,5 @@ The Crossbow of Power,18,4
 The Cloak of Wisdom,-17,47
 The Sword of Life,16,14
 The Hammer of Faith,40,-10
+The Wand of Magic,50,5
+The Best Weapond,40,30
