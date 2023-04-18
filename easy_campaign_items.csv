@@ -1,10 +1,10 @@
 Description,Type,Value
 Small First Aid Kit ,hp_item,10
-Medium First Aid Kit,hp_item,20
-Big First Aid Kit   ,hp_item,30
+Medium First Aid Kit,hp_item,30
+Big First Aid Kit   ,hp_item,50
 Small Protein Shake ,atk_item,10
-Medium Protein Shake,atk_item,20
-Big Protein Shake   ,atk_item,30
+Medium Protein Shake,atk_item,30
+Big Protein Shake   ,atk_item,50
 Small Papaya Juice  ,def_item,10
-Medium Papaya Juice ,def_item,20
-Big Papaya Juice    ,def_item,30
+Medium Papaya Juice ,def_item,30
+Big Papaya Juice    ,def_item,50
