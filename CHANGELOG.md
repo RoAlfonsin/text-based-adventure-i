@@ -105,3 +105,6 @@
 23. Added Congratulation message for winning the game
 24. Created funcionts necesary to keep and print scores
 25. merge, commit and delete branch
+
+26. Fixed issues #10 and #11
+27. Commit 
