@@ -138,3 +138,6 @@
 04. Commit, merge and erase branch
 
 05. Maxed player hp at 250 and lowered player stats
+
+06. Fixed bug with player hp over 250
+07. commit
